@@ -1,0 +1,139 @@
+.page-hero {
+  background: linear-gradient(120deg, rgba(20, 16, 17, 0.92), rgba(58, 15, 25, 0.8)), var(--color-bg-dark);
+  color: var(--color-cream);
+  padding: 64px 0;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: 2.4rem;
+  color: var(--color-white);
+  margin: 8px 0;
+}
+
+.page-hero p {
+  color: var(--color-text-muted);
+  max-width: 560px;
+  margin: 12px auto 0;
+}
+
+.about-mission {
+  padding: 72px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.about-mission-visual {
+  aspect-ratio: 4/3;
+  background: linear-gradient(160deg, var(--color-maroon), var(--color-bg-dark));
+  border: 1px solid rgba(201, 162, 77, 0.35);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.about-mission-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.about-mission-copy h2 {
+  font-size: 1.9rem;
+  margin: 10px 0 18px;
+  color: var(--color-maroon-dark);
+}
+
+.about-mission-copy p {
+  color: #55494c;
+  margin-bottom: 16px;
+}
+
+.values-section {
+  background: var(--color-bg-dark);
+  color: var(--color-cream);
+  padding: 72px 0;
+}
+
+.values-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 44px;
+}
+
+.values-header h2 {
+  font-size: 2rem;
+  color: var(--color-white);
+  margin: 10px 0;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.value-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(201, 162, 77, 0.3);
+  border-radius: 6px;
+  padding: 28px 24px;
+}
+
+.value-card .num {
+  font-family: var(--font-heading);
+  color: var(--color-pink);
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.value-card h3 {
+  font-size: 1.05rem;
+  color: var(--color-gold-light);
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.stats-section {
+  padding: 64px 0;
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.stat-item .stat-number {
+  font-family: var(--font-heading);
+  font-size: 2.6rem;
+  color: var(--color-maroon);
+}
+
+.stat-item .stat-label {
+  font-size: 0.85rem;
+  color: #6b5d60;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+  .about-mission {
+    grid-template-columns: 1fr;
+  }
+
+  .values-grid,
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

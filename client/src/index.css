@@ -1,0 +1,146 @@
+:root {
+  --color-bg-dark: #201a1c;
+  --color-bg-charcoal: #2a2325;
+  --color-maroon: #5c1826;
+  --color-maroon-dark: #3a0f19;
+  --color-maroon-darker: #2b0a12;
+  --color-pink: #d98ca0;
+  --color-pink-soft: #e3aab8;
+  --color-gold: #c9a24d;
+  --color-gold-light: #ddc07f;
+  --color-cream: #f3efec;
+  --color-white: #ffffff;
+  --color-text-muted: #cfc6c8;
+  --font-heading: "Oswald", "Arial Narrow", sans-serif;
+  --font-script: "Caveat", cursive;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-cream);
+  color: #2a2325;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 14px 28px;
+  border-radius: 2px;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--color-pink);
+  color: var(--color-maroon-darker);
+}
+
+.btn-primary:hover {
+  background: var(--color-pink-soft);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-cream);
+  border: 1.5px solid var(--color-gold);
+}
+
+.btn-outline:hover {
+  background: rgba(201, 162, 77, 0.15);
+}
+
+.eyebrow {
+  color: var(--color-pink);
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.section {
+  padding: 72px 0;
+}
+
+.divider-star {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--color-gold);
+}
+
+.divider-star::before,
+.divider-star::after {
+  content: "";
+  height: 1px;
+  width: 60px;
+  background: var(--color-gold);
+}
