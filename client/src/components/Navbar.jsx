@@ -6,7 +6,6 @@ import "./Navbar.css";
 const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
-  { to: "/join", label: "Join the Team" },
 ];
 
 export default function Navbar() {

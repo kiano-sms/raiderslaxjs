@@ -4,26 +4,19 @@ import "./About.css";
 const values = [
   {
     num: "01",
-    title: "Discipline",
-    description: "We hold every athlete to a high standard on the field, in the classroom, and in the community.",
+    title: "Confidence",
+    description: "We build players who believe in themselves, trust their abilities, and have the courage to compete with confidence.",
   },
   {
     num: "02",
-    title: "Character",
-    description: "Lacrosse is the vehicle — building honest, resilient young leaders is the mission.",
+    title: "Discipline",
+    description: "We believe success comes from consistent effort, preparation, accountability, and a commitment to doing the work even when no one is watching.",
   },
   {
     num: "03",
-    title: "Community",
-    description: "Players, families, and coaches grow together as one Raiders family, season after season.",
+    title: "Relentless Pursuit",
+    description: "We never stop improving. We challenge our athletes to pursue excellence, embrace challenges, and keep pushing towards their goals.",
   },
-];
-
-const stats = [
-  { number: "150+", label: "Athletes Trained" },
-  { number: "12", label: "Championship Titles" },
-  { number: "40+", label: "College Commits" },
-  { number: "10", label: "Years of Excellence" },
 ];
 
 export default function About() {
@@ -48,15 +41,22 @@ export default function About() {
           <span className="eyebrow">Our Story</span>
           <h2>Building Leaders, One Season at a Time</h2>
           <p>
-            Founded by coaches and players who believe lacrosse can shape more than an
-            athlete's game, the Raiders Lacrosse Academy was built to develop the whole
-            person. We combine elite, position-specific training with academic support and
-            a tight-knit community that pushes every athlete forward.
+            Raiders Lacrosse Academy was founded from a passion for lacrosse and a strong
+            belief in the opportunities that sport can create for young people.
           </p>
           <p>
-            From our youngest recruits to our college-bound seniors, every Raider is
-            challenged to compete with heart, lead with integrity, and leave the program
-            better than they found it.
+            We recognized that lacrosse can be much more than a game. For students who are
+            willing to work hard, commit themselves, and develop their talents, sports can
+            open doors to education, personal growth, mentorship, and scholarship
+            opportunities.
+          </p>
+          <p>
+            Our mission is to introduce, develop, and prepare athletes to reach their full
+            potential both on and off the field.
+          </p>
+          <p>
+            We believe that every young person deserves an opportunity to discover what they
+            are capable of—and we want lacrosse to be the vehicle that helps them get there.
           </p>
         </div>
       </section>
@@ -79,16 +79,13 @@ export default function About() {
         </div>
       </section>
 
-      <section className="stats-section container">
-        <span className="eyebrow">By the Numbers</span>
-        <div className="stats-grid">
-          {stats.map((stat) => (
-            <div className="stat-item" key={stat.label}>
-              <div className="stat-number">{stat.number}</div>
-              <div className="stat-label">{stat.label}</div>
-            </div>
-          ))}
-        </div>
+      <section className="commitment-section container">
+        <h2>Our Commitment</h2>
+        <p>
+          At Raiders Lacrosse Academy, we are not simply developing lacrosse players. We
+          are building confident athletes, developing leaders, and preparing young people
+          for success on the field and in life.
+        </p>
       </section>
     </>
   );

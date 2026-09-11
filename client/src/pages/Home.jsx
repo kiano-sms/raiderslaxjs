@@ -47,7 +47,7 @@ export default function Home() {
             </h1>
             <div className="hero-underline divider-star">★</div>
             <p className="hero-copy">
-              Empowering athletes. Building leaders. Creating a legacy on and off the field.
+              Built with confidence. Relentless in pursuit.
             </p>
             <Link to="/join" className="btn btn-primary">
               Join the Journey →
@@ -98,9 +98,7 @@ export default function Home() {
       <section className="programs section">
         <div className="container">
           <div className="programs-header">
-            <span className="eyebrow">Our Programs</span>
-            <h2>Train. Compete. Achieve.</h2>
-            <span className="hero-script">Elevate Every Season.</span>
+            <h2>Our Programs</h2>
           </div>
 
           <div className="programs-grid">
