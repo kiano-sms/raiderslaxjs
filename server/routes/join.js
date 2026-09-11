@@ -1,17 +1,13 @@
 import { Router } from "express";
-import { fileURLToPath } from "url";
-import path from "path";
-import fs from "fs";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const submissionsFile = path.join(__dirname, "..", "data", "submissions.json");
+import { sendSubmissionEmail } from "../mailer.js";
 
 const router = Router();
 
 const REQUIRED_FIELDS = ["firstName", "lastName", "email", "phone", "age", "position"];
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
   const body = req.body || {};
   const missing = REQUIRED_FIELDS.filter((field) => !String(body[field] || "").trim());
 
@@ -41,15 +37,12 @@ router.post("/", (req, res) => {
     submittedAt: new Date().toISOString(),
   };
 
-  let submissions = [];
   try {
-    submissions = JSON.parse(fs.readFileSync(submissionsFile, "utf-8"));
-  } catch {
-    submissions = [];
+    await sendSubmissionEmail(submission);
+  } catch (err) {
+    console.error("Failed to send submission email:", err);
+    return res.status(502).json({ error: "Failed to submit application. Please try again later." });
   }
-
-  submissions.push(submission);
-  fs.writeFileSync(submissionsFile, JSON.stringify(submissions, null, 2), "utf-8");
 
   res.status(201).json({ message: "Application received! Welcome to the Raiders family.", submission });
 });
