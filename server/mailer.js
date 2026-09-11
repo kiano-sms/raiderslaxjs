@@ -22,6 +22,7 @@ export async function sendSubmissionEmail(submission) {
       `Phone: ${submission.phone}`,
       `Age: ${submission.age}`,
       `Position: ${submission.position}`,
+      `Institution: ${submission.institution}`,
       `Experience: ${submission.experience || "-"}`,
       `Message: ${submission.message || "-"}`,
       `Submitted At: ${submission.submittedAt}`,

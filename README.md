@@ -45,5 +45,5 @@ with a `VITE_API_BASE` env var in `client/.env` if the backend runs elsewhere.
 - `GET /api/pillars` — About Us pillars (Develop/Empower/Inspire/Succeed)
 - `GET /api/programs` — program cards (Elite Training, Competitive Play, etc.)
 - `POST /api/join` — submit a team application (`firstName`, `lastName`,
-  `email`, `phone`, `age`, `position` required; `experience`, `message`
+  `email`, `phone`, `age`, `position`, `institution` required; `experience`, `message`
   optional). Validated submissions are appended to `server/data/submissions.json`.

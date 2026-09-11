@@ -4,7 +4,7 @@ import { sendSubmissionEmail } from "../mailer.js";
 
 const router = Router();
 
-const REQUIRED_FIELDS = ["firstName", "lastName", "email", "phone", "age", "position"];
+const REQUIRED_FIELDS = ["firstName", "lastName", "email", "phone", "age", "position", "institution"];
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 router.post("/", async (req, res) => {
@@ -32,6 +32,7 @@ router.post("/", async (req, res) => {
     phone: String(body.phone).trim(),
     age,
     position: String(body.position).trim(),
+    institution: String(body.institution).trim(),
     experience: String(body.experience || "").trim(),
     message: String(body.message || "").trim(),
     submittedAt: new Date().toISOString(),

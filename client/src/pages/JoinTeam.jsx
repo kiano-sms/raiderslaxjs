@@ -9,6 +9,7 @@ const INITIAL_FORM = {
   phone: "",
   age: "",
   position: "",
+  institution: "",
   experience: "",
   message: "",
 };
@@ -164,6 +165,18 @@ export default function JoinTeam() {
                     <option value="Not Sure">Not Sure</option>
                   </select>
                 </div>
+              </div>
+
+              <div className="form-field">
+                <label htmlFor="institution">Institution</label>
+                <input
+                  id="institution"
+                  name="institution"
+                  value={form.institution}
+                  onChange={handleChange}
+                  placeholder="School or club name"
+                  required
+                />
               </div>
 
               <div className="form-field">

@@ -17,7 +17,7 @@ export default function Navbar() {
         <NavLink to="/" className="navbar-brand" onClick={() => setOpen(false)}>
           <Logo size={44} />
           <span className="navbar-brand-text">
-            <strong>Raiders</strong>
+            <strong>RAIDERS</strong>
             <span>Lacrosse Academy</span>
           </span>
         </NavLink>
