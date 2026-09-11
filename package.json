@@ -1,0 +1,12 @@
+{
+  "name": "raiders-lacrosse-academy",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^4.19.2",
+    "nodemailer": "^10.0.3"
+  }
+}
